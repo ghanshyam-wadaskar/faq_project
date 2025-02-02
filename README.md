@@ -12,13 +12,13 @@ A RESTful API for managing FAQs with multi-language support, Redis caching, and 
 📦 Installation & Setup
 1️⃣ Clone the Repository
 bash
-git clone https://github.com/yourusername/faq_project.git
+git clone https://github.com/ghanshyam-wadaskar/faq_project.git
 cd faq_project
 
 2️⃣ Create & Activate a Virtual Environment
 bash
 python -m venv venv
-source venv/bin/activate  # On Mac/Linux
+
 venv\Scripts\activate      # On Windows
 
 3️⃣ Install Dependencies
@@ -40,7 +40,22 @@ bash
 python manage.py runserver
 Visit: http://127.0.0.1:8000/
 http://127.0.0.1:8000/api/faqs/ → To get the list of FAQs
+
 http://127.0.0.1:8000/admin/ → To access the Django admin panel
+admin userame: ghanshyam
+password: 2003
+
+API Usage Examples
+You can test the API endpoints with curl commands as mentioned. Here's how to do it:
+
+Fetch FAQs in English (default):
+curl http://localhost:8000/api/faqs/
+
+Fetch FAQs in Hindi:
+curl http://localhost:8000/api/faqs/?lang=hi
+
+Fetch FAQs in Bengali:
+curl http://localhost:8000/api/faqs/?lang=bn
 
 🐳 Running with Docker
 
